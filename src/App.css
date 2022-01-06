@@ -1,38 +1,279 @@
+/* 
+1.App
+2.YearRow
+3.SliderBox
+4.Card
+5.CardContent
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*App*/
 .App {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.App::-webkit-scrollbar {
+  display: none;
+}
+
+/* Year-Row */
+.year-row {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  padding: 20px;
+  overflow-x: hidden;
+}
+.year-row-container {
+  width: 250px;
+  border-bottom: #f06000 solid 2px;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  margin-bottom: 40px;
+}
+
+.year-row-container::-webkit-scrollbar {
+  display: none;
+}
+
+.selected-years,
+.years {
+  margin: 10px;
+  padding: 12px;
+  border: none;
+  background-color: transparent;
+}
+
+.years:active,
+.years:hover,
+.years:focus {
+  color: orange;
+}
+
+.selected-years {
+  color: orange;
+}
+
+/* SliderBox */
+.slider-container {
+  width: 800px;
+  height: 100vh;
+}
+.slider-box {
+  width: 100%;
+  height: 100%;
+}
+.slick-arrow,
+.slick-arrow:active,
+.slick-arrow:hover,
+.slick-arrow:focus,
+.slick-arrow:valid,
+.slick-arrow:visited,
+.slick-prev,
+.slick-prev:active,
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-prev:valid,
+.slick-prev:visited {
+  background-color: #282c34;
+  border-radius: 12px;
+  height: 75px;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-current {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Slide {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card */
+.card {
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #282c34;
+  width: 700px;
+  height: 700px;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  margin-left: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-title {
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 19px;
+  margin-bottom: 19px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Card-Content */
+.card-content {
+  height: 90%;
+  width: 100%;
+  background-color: #fafafa;
+  display: grid;
+  grid-template-columns: 200px 200px 500px;
+  grid-template-columns: 1fr 1fr;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 35px;
+  margin-top: 8px;
+}
+
+.content-box-title {
+  cursor: pointer;
+  font-weight: 800;
+  color: #282c34;
+}
+
+.content-box-title:hover {
+  color: #ffa45b;
+}
+
+.content-box-span {
+  color: #63666a;
+}
+
+/* Footer */
+.footer {
+  background-color: #373233;
+  width: 100vw;
+  height: 350px;
+  color: #ebeeee;
+  display: flex;
+  flex-direction: row;
+  padding: 12px;
+}
+
+.footer-left {
+  flex: 0.3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footer-right {
+  flex: 0.9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-countdown {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.countdown-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 2px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.countdown-days,
+.countdown-hours,
+.countdown-mins {
+  width: 50px;
+  height: 50px;
+  margin-left: 2px;
+  display: flex;
+  flex-direction: column;
+  border: #282c34 5px solid;
+}
+
+.countdown-time {
+  background-color: #fafafa;
+  flex: 1;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown-span {
+  background-color: #282c34;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.footer-contact {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 30px;
+  width: 100%;
+}
+
+.contact-logo {
+  margin: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo_img {
+  margin-right: 2px;
+  width: 40px;
+  height: 40px;
+}
+
+.logo_name {
+  font-size: 40px;
+}
+
+.footer-copy {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: rgba(255, 255, 255, 0.5);
+}
+.copy-span {
+  margin-right: 4px;
 }
