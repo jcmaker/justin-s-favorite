@@ -106,6 +106,10 @@
   flex-direction: column;
 }
 
+.slider-media-container {
+  display: none;
+}
+
 /* Card */
 .card {
   padding: 5px;
@@ -276,4 +280,248 @@
 }
 .copy-span {
   margin-right: 4px;
+}
+
+.media-footer {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  /* .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .year-row-container {
+    text-align: center;
+    padding: 15px;
+  }
+
+  .slider-media-container {
+    display: flex;
+    flex-direction:column;
+  }
+  .slider-box {
+    display: none;
+  }
+  .card {
+    
+  } */
+  .App {
+    width: 100vw;
+    height: 150vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .App::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Year-Row */
+  .year-row {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    padding: 20px;
+    padding-bottom: 0;
+    overflow-x: hidden;
+  }
+  .year-row-container {
+    width: 100%;
+    height: 10%;
+    border-bottom: #f06000 solid 2px;
+    display: flex;
+    align-items: center;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    margin-bottom: 40px;
+    z-index: 9;
+    position: absolute;
+    background-color: white;
+    top: 0%;
+  }
+
+  .year-row-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .selected-years,
+  .years {
+    margin: 10px;
+    padding: 12px;
+    border: none;
+    background-color: transparent;
+    z-index: 3;
+  }
+
+  .years:active,
+  .years:hover,
+  .years:focus {
+    color: orange;
+  }
+
+  .selected-years {
+    color: orange;
+  }
+
+  /* SliderBox */
+  .slider-container {
+    width: 90%;
+    height: auto;
+    padding-top: 780px;
+  }
+  .slider-box {
+    display: none;
+  }
+  /* .slick-arrow,
+  .slick-arrow:active,
+  .slick-arrow:hover,
+  .slick-arrow:focus,
+  .slick-arrow:valid,
+  .slick-arrow:visited,
+  .slick-prev,
+  .slick-prev:active,
+  .slick-prev:hover,
+  .slick-prev:focus,
+  .slick-prev:valid,
+  .slick-prev:visited {
+    background-color: #282c34;
+    border-radius: 12px;
+    height: 75px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
+
+  .slick-current {
+    display: none;
+  }
+
+  .Slide {
+    display: none;
+  }
+
+  .slider-media-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
+  }
+
+  /* Card */
+  .card {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #282c34;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .card-title {
+    color: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 19px;
+    margin-bottom: 19px;
+    font-size: 18px;
+  }
+
+  /* Card-Content */
+  .card-content {
+    height: 340px;
+    width: 100%;
+    background-color: #fafafa;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow-y: hidden;
+  }
+
+  .content-box {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+  }
+
+  .content-box-title {
+    cursor: pointer;
+    font-size: 12px;
+
+    word-break: break-all;
+
+    font-weight: 800;
+    color: #282c34;
+  }
+
+  .content-box-title:hover {
+    color: #ffa45b;
+  }
+
+  .content-box-span {
+    font-size: 8px;
+    color: #63666a;
+  }
+
+  /* Footer */
+
+  /* .footer {
+    background-color: #373233;
+    width: 100vw;
+    height: 350px;
+    color: #ebeeee;
+    display: flex;
+    flex-direction: row;
+    padding: 12px;
+    position: fixed;
+    bottom: 0%;
+  } */
+
+  .media-footer {
+    display: flex;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #373233;
+    bottom: 0%;
+    color: #ebeeee;
+  }
+  .media-footer-container {
+    display: flex;
+    background-color: #373233;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100vw;
+    height: 50vh;
+  }
+  footer {
+    display: none;
+  }
+  .footer {
+    display: none;
+  }
 }

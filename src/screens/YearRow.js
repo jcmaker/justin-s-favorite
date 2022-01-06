@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SliderBox from "./SliderBox";
+import MediaFooter from "./MediaFooter";
 
 function YearRow({ data }) {
   const [thisYear, setThisYear] = useState();
@@ -26,6 +27,9 @@ function YearRow({ data }) {
     <div className="year-row">
       <div className="year-row-container">{years}</div>
       <SliderBox data={yearCard} year={thisYear} />
+      <div className="media-footer">
+        <MediaFooter />
+      </div>
     </div>
   );
 }

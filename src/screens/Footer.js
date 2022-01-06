@@ -37,7 +37,7 @@ function Footer() {
     }, 1000);
   }, []);
   return (
-    <div className="footer">
+    <footer className="footer">
       <div className="footer-left">
         <div className="footer-countdown">
           <h3 className="newyear-title">New Year Countdown</h3>
@@ -84,7 +84,7 @@ function Footer() {
           <span className="copy-span">Item - COUPANG</span>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
 

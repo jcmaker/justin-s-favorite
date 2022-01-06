@@ -23,6 +23,7 @@ function SliderBox({ data, year }) {
           {cards}
         </Slider>
       </div>
+      <div className="slider-media-container">{cards}</div>
     </div>
   );
 }
