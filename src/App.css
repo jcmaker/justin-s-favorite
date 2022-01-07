@@ -508,6 +508,7 @@
     background-color: #373233;
     bottom: 0%;
     color: #ebeeee;
+    padding: 32px;
   }
   .media-footer-container {
     display: flex;
@@ -523,5 +524,83 @@
   }
   .footer {
     display: none;
+  }
+
+  .media-countdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .media-countdown-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .media-countdown-box {
+    width: 40px;
+    height: 40px;
+    border: 5px solid #282c34;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+  }
+
+  .media-new-year {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .media-countdown-time {
+    background-color: #fafafa;
+    width: 100%;
+    text-align: center;
+    color: #282c34;
+  }
+
+  .media-countdown-span {
+    background-color: #282c34;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  .media-contact {
+    color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+
+  .media-contact-box {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .media-contact-logo {
+    margin: 4px;
+  }
+
+  .media-logo-name {
+    display: flex;
+    align-items: center;
+  }
+
+  .media-logo-img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
+  .media-logo-span {
+    font-size: 30px;
   }
 }

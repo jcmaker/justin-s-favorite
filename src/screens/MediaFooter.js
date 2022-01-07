@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from "react";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import FacebookIcon from "@mui/icons-material/Facebook";
 
 function MediaFooter() {
   const [time, setTime] = useState("");
@@ -35,7 +39,8 @@ function MediaFooter() {
   return (
     <div className="media-footer-container">
       <div className="media-countdown">
-        <span>New Year Countdown</span>
+        {time}
+        <span className="media-new-year">New Year Countdown</span>
         <div className="media-countdown-container">
           <div className="media-countdown-box">
             <span className="media-countdown-time">{dayTime}</span>
@@ -50,12 +55,28 @@ function MediaFooter() {
             <span className="media-countdown-span">Min</span>
           </div>
         </div>
+        <span>📌Updates On Every December📌</span>
       </div>
       <div className="media-contact">
         <span>Contact</span>
+        <div className="media-contact-box">
+          <span className="media-contact-logo">
+            <InstagramIcon />
+          </span>
+          <span className="media-contact-logo">
+            <GitHubIcon />
+          </span>
+          <span className="media-contact-logo">
+            <YouTubeIcon />
+          </span>
+          <span className="media-contact-logo">
+            <FacebookIcon />
+          </span>
+        </div>
       </div>
       <div className="media-logo-name">
-        <span>Justin's Favorite</span>
+        <img src="img/mainlogo_web.png" alt="logo" className="media-logo-img" />
+        <span className="media-logo-span">Justin's Favorite</span>
       </div>
     </div>
   );
